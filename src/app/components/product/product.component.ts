@@ -19,13 +19,11 @@ export class ProductComponent implements OnInit {
     this.getProducts();
   }
 
-  getProducts(){
+  getProducts(): void{
     this.productService.getProducts().subscribe(response=>{
       this.products=response.data
       this.dataLoaded = true;
     })
-    
-
   }
  
 }
